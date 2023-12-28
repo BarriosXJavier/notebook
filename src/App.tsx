@@ -9,7 +9,7 @@ function App() {
     setNotes(storedNotes);
   }, []);
 
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState<string[]>([]);
   const [currentNote, setCurrentNote] = useState("");
 
   const addNote = () => {
@@ -39,6 +39,7 @@ function App() {
       />
       <Button
         onClick={addNote}
+        className="ml-3"
       >
         Add Note
       </Button>

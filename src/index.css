@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body, html {
     background-color: #fef9c1;
+    min-width: 320px;
+    min-height: 549px;
 }
