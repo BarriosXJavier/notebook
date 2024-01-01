@@ -4,10 +4,11 @@
     "version": "1.0",
     "description": "A notepad to store useful links or notes in the browser",
     "icons": {
-        "48": "dist/assets/icon-Dle0BTMy.png"
+        "48": "./icon-Dle0BTMy.png",
+        "128": "./full128.png"
     },
     "browser_action": {
-        "default_icon": "dist/assets/icon-Dle0BTMy.png",
+        "default_icon": "./assets/icon-Dle0BTMy.png",
         "default_popup": "index.html"
     },
     "permissions": [

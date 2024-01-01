@@ -39,14 +39,14 @@ function App() {
       />
       <Button
         onClick={addNote}
-        className="ml-3"
+        className="ml-3 px-4 rounded-md"
       >
         Add Note
       </Button>
 
       <ul className="space-y-2">
         {notes.map((note, index) => (
-          <li key={index} className="relative py-2 px-6 border-l-4">
+          <li key={index} className="relative py-4 px-6 border-b border-b-gray-500">
             <span
               className="block break-all]"
               style={{ whiteSpace: "pre-wrap" }}
@@ -56,7 +56,7 @@ function App() {
             <Button
               variant="destructive"
               onClick={() => removeNote(index)}
-              className="absolute top-2 right-2"
+              className="rounded-md absolute right-4 top-0.5 bottom-0.5"
             >
               Remove
             </Button>
