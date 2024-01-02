@@ -35,7 +35,7 @@ function App() {
         placeholder="Add note or link"
         value={currentNote}
         onChange={(e) => setCurrentNote(e.target.value)}
-        className="border-b border-gray-500 py-2 w-full px-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 mb-1"
+        className="border-b border-gray-500 py-2 w-full px-3 text-gray-900 placeholder-gray-500 placeholder:font-medium placeholder:md focus:outline-none focus:ring-2 focus:ring-gray-200 mb-1"
       />
       <Button
         onClick={addNote}
