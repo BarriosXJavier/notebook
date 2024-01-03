@@ -29,24 +29,32 @@ function App() {
   };
 
   return (
-    <div className="relative h-full]">
+    <div
+      className="relative bg-scroll cursor-text inline-block font-normal mb-2 outline-none pb-2 pl-2 pr-2 resize-none text-start text-wrap text-[16px]"
+      style={{
+        backgroundImage: "url(./notepad.png)",
+        backgroundSize: 'auto',
+        backgroundRepeat:'repeat',
+        width:'100%', 
+      }}
+    >
       <input
         type="text"
-        placeholder="Add note or link"
+        placeholder="Add note"
         value={currentNote}
         onChange={(e) => setCurrentNote(e.target.value)}
-        className="border-b border-gray-500 py-2 w-full px-3 text-gray-900 placeholder-gray-500 placeholder:font-medium placeholder:md focus:outline-none focus:ring-2 focus:ring-gray-200 mb-1"
+        className="border-b border-black py-5 text-wrap w-full text-gray-900 placeholder-gray-600 placeholder:font-medium placeholder:md focus:outline-none focus:ring-2 focus:ring-gray-200"
       />
-      <Button
-        onClick={addNote}
-        className="ml-3 px-4 rounded-md"
-      >
+      <Button onClick={addNote} className="px-4 py-2 my-1 rounded-md text-[14px]">
         Add Note
       </Button>
 
-      <ul className="space-y-2">
+      <ul className="space-y-1">
         {notes.map((note, index) => (
-          <li key={index} className="relative py-4 px-6 border-b border-b-gray-500">
+          <li
+            key={index}
+            className="relative p-4 border-b border-b-gray-700"
+          >
             <span
               className="block break-all]"
               style={{ whiteSpace: "pre-wrap" }}
@@ -56,7 +64,7 @@ function App() {
             <Button
               variant="destructive"
               onClick={() => removeNote(index)}
-              className="rounded-md absolute right-4 top-0.5 bottom-0.5"
+              className="rounded-md absolute right-2 top-1 bottom-1 text-sm py-1 px-4"
             >
               Remove
             </Button>
